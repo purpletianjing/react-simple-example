@@ -1,5 +1,3 @@
-var React = require('react');
-
 var AwesomeComponent = React.createClass({
   getInitialState: function() {
     return {

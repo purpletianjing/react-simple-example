@@ -6,10 +6,14 @@ var APP_DIR = path.resolve(__dirname, 'src/client/app');
 var LESS_DIR = path.resolve(__dirname, 'src/less');
 
 var config = {
-  entry : APP_DIR + '/FilteredList.jsx',
+  entry : {
+    "filteredList" : APP_DIR + '/FilteredList.jsx',
+    "index" : APP_DIR + '/index.jsx',
+    "example" : APP_DIR + '/example.jsx'
+  },
   output : {
     path : BUILD_DIR,
-    filename : 'bundle.js'
+    filename : '[name].js'
   },
   module : {
     loaders : [
@@ -24,7 +28,13 @@ var config = {
         loader : 'style!css!less'
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      React: 'react',
+      ReactDOM : 'react-dom'
+    })
+  ]
 };
 
 module.exports = config;

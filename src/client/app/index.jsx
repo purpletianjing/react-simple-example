@@ -1,5 +1,3 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
 var AwesomeComponent = require('./AwesomeComponent.jsx');
 require('../../less/index.less');
 

@@ -1,5 +1,3 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
 var List = require('./List.jsx');
 require('../../less/filteredList.less');
 
